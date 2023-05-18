@@ -30,7 +30,7 @@ export default function RegisterModal() {
         setIsLoading(true);
 
         try {
-            await axios.post('/api/register', data);
+            await axios.post('pages/api/register', data);
             registerModal.onClose();
 
         } catch (error) {
@@ -44,9 +44,9 @@ export default function RegisterModal() {
         <div className='flex flex-col gap-4'>
             <Heading title='Welcome to AirBnB'
                 subtitle='Create an account!' />
-            <Input id='email' label='Email' register={register} disabled={isLoading} errors={errors} required />
+            <Input id='email' label='Email' type='email' register={register} disabled={isLoading} errors={errors} required />
             <Input id='name' label='Name' register={register} disabled={isLoading} errors={errors} required />
-            <Input id='password' label='Password' register={register} disabled={isLoading} errors={errors} required />
+            <Input id='password' type='password' label='Password' register={register} disabled={isLoading} errors={errors} required />
         </div>
     );
 

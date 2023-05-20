@@ -58,6 +58,8 @@ export default function Modal({
             return;
         };
 
+        secondaryAction();
+
     }, [disabled, secondaryAction]);
 
     if (!isOpen) {

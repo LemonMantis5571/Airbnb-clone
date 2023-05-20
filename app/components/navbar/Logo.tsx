@@ -8,7 +8,8 @@ export default function Logo() {
     const router = useRouter();
 
     return (
-        <Image  
+        <Image
+        onClick={() => router.push('/')}
         alt="logo" 
         className="hidden md:block cursor-pointer" 
         height={"100"} 

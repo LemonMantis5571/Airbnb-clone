@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react'
-import { signIn} from 'next-auth/react';
+import { signIn } from 'next-auth/react';
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc'
 import { useCallback, useState } from 'react';
@@ -30,6 +30,11 @@ export default function LoginModal() {
         }
     });
 
+    const onToggle = useCallback(() => {
+        LoginModal.onClose();
+        registerModal.onOpen();
+    }, [LoginModal, registerModal])
+
     const onSubmit: SubmitHandler<FieldValues> = async (data) => {
         setIsLoading(true);
 
@@ -41,23 +46,23 @@ export default function LoginModal() {
 
             setIsLoading(false);
 
-            if(callback?.ok) {
+            if (callback?.ok) {
                 toast.success('Logged In');
                 router.refresh();
                 LoginModal.onClose();
             }
 
-            if(callback?.error) {
+            if (callback?.error) {
                 toast.error(callback.error);
             }
 
-            
+
         } catch (error) {
-           console.log(error);
-           setIsLoading(false);
-           toast.error('An Error Ocurred');
+            console.log(error);
+            setIsLoading(false);
+            toast.error('An Error Ocurred');
         }
-      
+
     }
 
     const bodyContent = (
@@ -72,16 +77,15 @@ export default function LoginModal() {
     const footerContent = (
         <div className='flex flex-col gap-4 mt-3'>
             <hr />
-            <Button outline label='Continue with Google' icon={FcGoogle} onClick={() => { }} />
-            <Button outline label='Continue with Github' icon={AiFillGithub} onClick={() => { }} />
+            <Button outline label='Continue with Google' icon={FcGoogle} onClick={() => signIn('google')} />
+            <Button outline label='Continue with Github' icon={AiFillGithub} onClick={() => signIn('github')} />
             <div className='text-neutral-500 text-center mt-4 font-light'>
                 <div className='justify-center flex flex-row items-center gap-2'>
-                    <div>
-                        Already have an Account?
-                    </div>
-                    <div className='text-neutral-800 cursor-pointer hover:underline' onClick={registerModal.onClose}>
-                        Log in
-                    </div>
+                    <p>First time using Airbnb?
+                    </p>
+                    <span onClick={onToggle} className=" text-neutral-800 cursor-pointer hover:underline">
+                        Create an account
+                    </span>
                 </div>
             </div>
         </div>

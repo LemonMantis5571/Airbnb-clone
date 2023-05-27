@@ -13,9 +13,12 @@ import { toast } from 'react-hot-toast';
 import Button from '../Button';
 import { signIn } from 'next-auth/react';
 import useLoginModal from '@/app/hooks/useLoginModal';
+import { useRouter } from 'next/navigation';
 
 export default function RegisterModal() {
 
+
+    const router = useRouter();
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
     const [isLoading, setIsLoading] = useState(false);

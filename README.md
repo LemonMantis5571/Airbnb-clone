@@ -1,51 +1,32 @@
-# AirBnB clone*
-This is a FULL STACK PROJECT. Airbnb clone using NextJS 13
+# AirBnB Clone
 
-To run this app you need to 
-``` 
-npm i
-npm run dev
-```
+This is a full-stack project that serves as a clone of the popular Airbnb platform. It is built using Next.js 13, React, Prisma, MongoDB, Zustand, Cloudinary, and NextAuth.
 
-CONTENTS OF THIS FILE
----------------------
+## Technologies Used
 
- * Introduction
- * Technologies Used
- * Usage
- * Maintainers
+- HTML
+- CSS
+- Tailwind CSS
+- TypeScript
+- Zustand
+- React
+- Next.js
+- NextAuth
+- Cloudinary
+- Prisma
 
+## Usage
 
+To run this application, follow these steps:
 
-INTRODUCTION
-------------
+1. Install dependencies by running `npm i`.
+2. Start the development server by running `npm run dev`.
 
-This is a complete full stack project, an airbnb clone using Nextjs 13, RSC, Prisma, Mongodb, Zustand, Cloudinary and NextAuth.
+## Maintainers
 
-Technologies
-------------
+This project is maintained by LemonMantis. For any questions or inquiries, please reach out in discord "lemonmantis".
 
-HTML.
-
-CSS.
-
-Tailwind.
-
-TypeScript
-
-Zustand
-
-React.
-
-NextJS
-
-NextAuth
-
-Cloudinary
-
-Prisma.
-
-Usage
+Preview
 ------------
 
 Start listing your properties today!
@@ -63,10 +44,9 @@ Disclaimer: This is just a clone and should not be used to transact real propert
 
 
 
-MAINTAINERS
+APP Link
 -----------
 
- * Leonel Guerrero (LemonMantis5571) - https://github.com/LemonMantis5571
  * APP Link: https://rent-houses-ten.vercel.app/
 
 

@@ -21,6 +21,19 @@ To run this application, follow these steps:
 
 1. Install dependencies by running `npm i`.
 2. Start the development server by running `npm run dev`.
+3. The project needs the following .env vars:
+   
+```dotenv
+DATABASE_URL=
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+GITHUB_ID=
+GITHUB_SECRET=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+URL=
+```
 
 ## Maintainers
 
